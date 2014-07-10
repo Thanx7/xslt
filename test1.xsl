@@ -24,7 +24,11 @@
 
   <xsl:if test="doc-level">
       <xsl:for-each select="doc-level">
-        <span>doc-level</span>
+        <xsl:for-each select="para">
+          <div>
+            <xsl:value-of select="."/>
+          </div>
+        </xsl:for-each>
       </xsl:for-each>
   </xsl:if>
 
@@ -36,8 +40,34 @@
 
   <xsl:if test="para">
       <xsl:for-each select="para">
-        <span>para</span>
-      </xsl:for-each>    
+
+        <xsl:if test="@type = 'unordered-list'">
+          <ul>
+            <xsl:for-each select="list-item">
+              <li>
+                <xsl:value-of select="."/>
+              </li>
+            </xsl:for-each>
+          </ul>
+        </xsl:if>
+
+        <xsl:if test="@type = 'image'">
+            <xsl:for-each select="image">
+              <img>
+                <xsl:attribute name="src">
+                  <xsl:value-of select="@source" />
+                </xsl:attribute>
+                <xsl:attribute name="alt">
+                  <xsl:value-of select="@description" />
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:value-of select="@description" />
+                </xsl:attribute>                                
+              </img>
+            </xsl:for-each>
+        </xsl:if>
+
+      </xsl:for-each>
   </xsl:if>
 
   <xsl:if test="external-link">
