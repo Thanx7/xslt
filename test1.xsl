@@ -8,7 +8,7 @@
 
 <xsl:template match="event">
   <title>
-    <xsl:value-of select="@id"/>
+    Event <xsl:value-of select="@id"/>
   </title>
   <xsl:apply-templates select="heading"/>
   <xsl:apply-templates select="doc-level"/>
@@ -21,15 +21,45 @@
 </xsl:template>
 
 <xsl:template match="doc-level">
+<div style="padding: 5px;">
+  <xsl:if test="@position = 'center'">
+    <xsl:attribute name="style">
+      <xsl:value-of select="'text-align:center;'" />
+    </xsl:attribute>
+  </xsl:if>
 
   <xsl:if test="doc-level">
-      <xsl:for-each select="doc-level">
+    <xsl:for-each select="doc-level">
+      <div style="padding: 5px;">
+        <xsl:if test="@position = 'left'">
+          <xsl:attribute name="style">
+            <xsl:value-of select="'text-align:left;'" />
+          </xsl:attribute>
+        </xsl:if>
+
         <xsl:for-each select="para">
-          <div>
+          <p>
+            <xsl:if test="@type = 'text'">
+              <xsl:attribute name="style">
+                <xsl:value-of select="'font-style:italic;'" />
+              </xsl:attribute>
+            </xsl:if>
+            <xsl:if test="@type = 'comment'">
+              <xsl:attribute name="style">
+                <xsl:value-of select="'background-color:#cccccc; outline-offset:100px;'" />
+              </xsl:attribute>
+            </xsl:if>
+
+            <xsl:if test="date">
+            Date:
+            </xsl:if>
+            
             <xsl:value-of select="."/>
-          </div>
+          </p>
         </xsl:for-each>
-      </xsl:for-each>
+
+      </div>
+    </xsl:for-each>
   </xsl:if>
 
   <xsl:if test="table">
@@ -40,6 +70,7 @@
 
   <xsl:if test="para">
       <xsl:for-each select="para">
+      <p>
 
         <xsl:if test="@type = 'unordered-list'">
           <ul>
@@ -67,6 +98,7 @@
             </xsl:for-each>
         </xsl:if>
 
+      </p>
       </xsl:for-each>
   </xsl:if>
 
@@ -74,6 +106,7 @@
     <xsl:apply-templates select="external-link"/>
   </xsl:if>
 
+</div>
 </xsl:template>
 
 <xsl:template match="table">
