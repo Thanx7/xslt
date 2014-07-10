@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" 
+                 href="test1.xsl"?>
+<event id="1">
+	<heading type="title">Aston Villa - Arsenal</heading>
+	<doc-level position="center">
+		<doc-level>
+			<para type="text">Venue: Villa Park</para>
+			<para type="text">
+				<date>13/1/2014</date>
+			</para>
+			<para type="text">Referee: TBA</para>
+		</doc-level>
+		<doc-level position="left">
+			<para type="comment">Aston Villa defenders Ron Vlaar and Nathan Baker are both doubts because of respective calf and hamstring problems.</para>
+		</doc-level>
+	</doc-level>
+	<doc-level>
+		<table>
+			<table-heading>Team News</table-heading>
+			<table-row>
+				<table-cell style="bold">Aston Villa</table-cell>
+				<table-cell>Brad Guzan and Gabriel Agbonlahor have overcome minor injuries, while Ciaran Clark is back from suspension.</table-cell>
+			</table-row>
+			<table-row>
+				<table-cell style="bold">Arsenal</table-cell>
+				<table-cell>Thomas Vermaelen (knee) is a doubt and Theo Walcott has been ruled out for the rest of the season.</table-cell>
+			</table-row>
+		</table>
+	</doc-level>
+	<doc-level>
+		<para type="unordered-list" style="disc">
+			<list-item>Aston Villa haven't beaten Arsenal at home in 14 attempts since coming from two goals down to win 3-2 in December 1998 (D7, L7).</list-item>
+			<list-item>Arsenal have lost only three of their subsequent 30 league meetings with Villa, including a 3-1 home defeat on the opening day of this season.</list-item>
+			<list-item>Aston Villa have not beaten Arsenal home and away in the same season since the inaugural Premier League campaign of 1992-93.</list-item>
+		</para>
+		<para type="image">
+			<image source="player1.jpg" description="Brad Guzan"/>
+			<image source="player2.jpg" description="Wojciech Szczesny"/>
+		</para>
+		<external-link source="http://www.bbc.com/sport/0/football/25617902"/>
+	</doc-level>
+</event>

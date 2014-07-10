@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<event id="3">
+	<heading type="title">ASTON VILLA: How they fared last season</heading>
+	<table>
+		<table-row>
+			<table-cell style="bold">Premier League:</table-cell>
+			<table-cell>15th</table-cell>
+		</table-row>
+		<table-row>
+			<table-cell style="bold">FA Cup:</table-cell>
+			<table-cell>Fourth round</table-cell>
+		</table-row>
+		<table-row>
+			<table-cell style="bold">Capital One Cup:</table-cell>
+			<table-cell>Semi-final</table-cell>
+		</table-row>
+	</table>
+	<doc-level type="comment">
+		<para type="text">
+			<date>13/1/2014</date>
+		</para>
+		<external-link source="http://www.bbc.com/sport/0/football/22905732"/>
+	</doc-level>
+	<doc-level type="bluebox">
+		<para type="text">In his regular BBC Sport column, Robbie Savage looks at Aston Villa's 3-0 defeat by Manchester United on Sunday.</para>
+		<para type="text">There has been a lot of criticism of United in recent weeks, so their manager David Moyes deserves credit for getting things right at Villa Park. A number of their players can take real positives away from the game.</para>
+		<para type="text">But it helped Moyes a lot that Villa were so poor in pretty much every area of the pitch. In fact, they were awful.</para>
+	</doc-level>
+	<doc-level>
+		<h1>Leandro Bacuna</h1>
+		<h2>Nicklas Helenius</h2>
+		<subheading>Antonio Luna</subheading>
+	</doc-level>
+	<doc-level position="right">
+		<para type="num">
+			<num>XXIV</num>			
+		</para>
+		<h1>Summer so far</h1>
+	</doc-level>
+</event>
